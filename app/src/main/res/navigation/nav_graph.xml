@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/winterFragment">
+
+    <fragment
+        android:id="@+id/winterFragment"
+        android:name="com.example.anilife.ui.fragment.WinterFragment"
+        android:label="Winter"
+        tools:layout="@layout/winter_fragment">
+
+
+        <action
+            android:id="@+id/action_winterFragment_to_springFragment"
+            app:destination="@id/springFragment" />
+        <action
+            android:id="@+id/action_winterFragment_to_summerFragment"
+            app:destination="@id/summerFragment" />
+        <action
+            android:id="@+id/action_winterFragment_to_fallFragment"
+            app:destination="@id/fallFragment" />
+        <action
+            android:id="@+id/action_winterFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/springFragment"
+        android:name="com.example.anilife.ui.fragment.SpringFragment"
+        android:label="Spring"
+        tools:layout="@layout/spring_fragment">
+
+
+        <action
+            android:id="@+id/action_springFragment_to_winterFragment"
+            app:destination="@id/winterFragment" />
+        <action
+            android:id="@+id/action_springFragment_to_fallFragment"
+            app:destination="@id/fallFragment" />
+        <action
+            android:id="@+id/action_springFragment_to_summerFragment"
+            app:destination="@id/summerFragment" />
+        <action
+            android:id="@+id/action_springFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/summerFragment"
+        android:name="com.example.anilife.ui.fragment.SummerFragment"
+        android:label="Summer"
+        tools:layout="@layout/summer_fragment">
+
+
+        <action
+            android:id="@+id/action_summerFragment_to_springFragment"
+            app:destination="@id/springFragment" />
+        <action
+            android:id="@+id/action_summerFragment_to_winterFragment"
+            app:destination="@id/winterFragment" />
+        <action
+            android:id="@+id/action_summerFragment_to_fallFragment"
+            app:destination="@id/fallFragment" />
+        <action
+            android:id="@+id/action_summerFragment_to_winterFragment2"
+            app:destination="@id/winterFragment" />
+        <action
+            android:id="@+id/action_summerFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fallFragment"
+        android:name="com.example.anilife.ui.fragment.FallFragment"
+        android:label="Fall"
+        tools:layout="@layout/summer_fragment">
+
+
+        <action
+            android:id="@+id/action_fallFragment_to_winterFragment"
+            app:destination="@id/winterFragment" />
+        <action
+            android:id="@+id/action_fallFragment_to_springFragment"
+            app:destination="@id/springFragment" />
+        <action
+            android:id="@+id/action_fallFragment_to_summerFragment"
+            app:destination="@id/summerFragment" />
+        <action
+            android:id="@+id/action_fallFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/animeFragment"
+        android:name="com.example.anilife.ui.fragment.AnimeFragment"
+        android:label="Anime"
+        tools:layout="@layout/anime_fragment">
+
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="index"
+            type="int" />
+
+        <variable
+            name="airingAnime"
+            type="com.example.anilife.vo.AiringAnime" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/airing_anime_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/black_500">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/anime_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/anime_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="12dp"
+                android:hint="TYPE"
+                android:textColor="@color/gold_500"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/anime_image"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:animeType="@{airingAnime.type}" />
+
+
+            <TextView
+                android:id="@+id/anime_airing_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:hint="AIRING DATE"
+                android:textColor="@color/gold_700"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/anime_image"
+                app:layout_constraintTop_toBottomOf="@id/anime_type"
+                bind:animeAiringDate="@{airingAnime.airing_start}" />
+
+
+            <TextView
+                android:id="@+id/anime_synopsis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:ellipsize="end"
+                android:hint="SYNOPSIS"
+                android:maxLines="5"
+                android:text="@{airingAnime.synopsis}"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.712"
+                app:layout_constraintStart_toEndOf="@id/anime_image"
+                app:layout_constraintTop_toBottomOf="@id/anime_episodes" />
+
+            <TextView
+                android:id="@+id/anime_episodes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:hint="EPISODES"
+                android:textSize="12sp"
+                android:text='@{airingAnime.episodes == 1 ? 1 + " Episode" : airingAnime.episodes + " Episodes"}'
+                android:visibility="@{airingAnime.episodes != null ? View.VISIBLE : View.GONE}"
+                android:textColor="@color/gold_600"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/anime_image"
+                app:layout_constraintTop_toBottomOf="@id/anime_airing_date" />
+
+            <TextView
+                android:id="@+id/anime_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#C0000000"
+                android:elevation="4dp"
+                android:hint="TITLE"
+                android:padding="8dp"
+                android:text="@{airingAnime.title}"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="@id/anime_image"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/anime_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_foreground"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toStartOf="@id/anime_synopsis"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:animeImage="@{airingAnime.image_url}" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/anime_genre_recyclerview"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/gold_700"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/anime_image" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/winterFragment"
+        android:icon="@drawable/winter_icon"
+        android:title="Winter" />
+    <item
+        android:id="@+id/springFragment"
+        android:icon="@drawable/spring_icon"
+        android:title="Spring" />
+
+    <item
+        android:id="@+id/summerFragment"
+        android:icon="@drawable/summer_icon"
+        android:title="Summer" />
+
+    <item
+        android:id="@+id/fallFragment"
+        android:icon="@drawable/fall_icon"
+        android:title="Fall" />
+</menu>
