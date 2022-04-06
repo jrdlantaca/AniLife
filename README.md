@@ -1,1 +1,5 @@
-# AniLife
+# ![AniLife Winter](https://drive.google.com/uc?export=view&id=1Ymn9vaq5K7feglvUe9t7-lyR3leNHRSl)
+# ![AniLife Spring](https://drive.google.com/uc?export=view&id=1fprmkFZG6Iyft2AfvGt2VA-YTjiL1Z0u)
+# ![AniLife Summer](https://drive.google.com/uc?export=view&id=1Orto3P3KkkaOkk7Mcs7-PJW8MrNEV6WW)
+# ![AniLife Fall](https://drive.google.com/uc?export=view&id=1wIIKvKvamOWIEU0MVOXAb0HcAw0xoUmG)
+# ![AniLife Details](https://drive.google.com/uc?export=view&id=11TEmxPpDgzxmA6noME_TMK4yzLRKdRZW)
